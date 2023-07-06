@@ -1,6 +1,17 @@
 import { Heading, VStack } from '@chakra-ui/react';
+import { useEffect } from 'react';
+
+import { getAllProducts } from '../service/products';
 
 export const Home = () => {
+  useEffect(() => {
+    const getData = async () => {
+      await getAllProducts();
+    };
+
+    getData();
+  }, []);
+
   return (
     <VStack>
       <Heading
