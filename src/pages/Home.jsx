@@ -1,16 +1,35 @@
-import { Heading, VStack } from '@chakra-ui/react';
-import { useEffect } from 'react';
+import {
+  Button,
+  ButtonGroup,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
+import { Card, CardBody, CardFooter } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
 import { getAllProducts } from '../service/products';
 
 export const Home = () => {
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const getData = async () => {
-      await getAllProducts();
+      try {
+        const data = await getAllProducts();
+        setProducts(data);
+      } catch (error) {
+        console.log('error');
+      }
     };
 
     getData();
   }, []);
+  console.log(products);
 
   return (
     <VStack>
@@ -26,6 +45,35 @@ export const Home = () => {
         y calidad, ESCALERAS que transforman ambientes, viviendo la belleza de
         los detalles.
       </Heading>
+
+      <Flex flexWrap={'wrap'} gap={'15px'} justifyContent={'center'}>
+        {products.map((product) => (
+          <Card maxW="xs" key={product.id}>
+            <CardBody>
+              <Image
+                src={product.images[0]}
+                alt={product.name}
+                borderRadius="lg"
+              />
+              <Stack mt="6" spacing="3">
+                <Heading size="md">{product.name} </Heading>
+                <Text>{product.description}</Text>
+              </Stack>
+            </CardBody>
+            <Divider />
+            <CardFooter>
+              <ButtonGroup spacing="2">
+                <Button variant="solid" colorScheme="teal">
+                  Ver más
+                </Button>
+                <Button variant="ghost" colorScheme="teal">
+                  Add to cart
+                </Button>
+              </ButtonGroup>
+            </CardFooter>
+          </Card>
+        ))}
+      </Flex>
     </VStack>
   );
 };
