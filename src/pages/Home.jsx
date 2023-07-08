@@ -23,9 +23,10 @@ export const Home = () => {
         <Heading
           color={'whiteAlpha.900'}
           bg={'black'}
-          p={20}
-          h={'300px'}
+          p={7}
           w={'60%'}
+          mb={50}
+          mt={50}
         >
           ESCALERAS EXCLUSIVAS, desde Cantabria para España, únicas por su
           diseño y calidad, ESCALERAS que transforman ambientes, viviendo la
@@ -35,7 +36,12 @@ export const Home = () => {
 
       <Flex flexWrap={'wrap'} gap={'15px'} justifyContent={'center'}>
         {products.map((product) => (
-          <Card maxW="xs" key={product.id} bgColor={'black'} color={'white'}>
+          <Card
+            maxW="xs"
+            key={product.id}
+            backgroundColor="rgba(0, 0, 0, 0.8)"
+            color={'white'}
+          >
             <CardBody>
               <Image
                 src={product.images[0]}

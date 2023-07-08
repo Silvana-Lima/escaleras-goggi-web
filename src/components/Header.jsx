@@ -13,14 +13,20 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
+import logoEmpresa from '../assets/logoEmpresa.svg';
+
 export const Header = () => {
   return (
-    <Flex as="header" w={'100%'} p={5} justify={'space-around'}>
-      <Stack as={Link} to={'/'} size={'sm'} mr={30}>
-        <Image
-          src="http://escalerasmartinezlastra.es/wp-content/uploads/2014/03/LogoDef.gif"
-          alt="Logo"
-        />
+    <Flex
+      as="header"
+      w={'100%'}
+      justify={'space-around'}
+      alignItems={'center'}
+      backgroundColor="rgba(0, 0, 0, 0.8)"
+      color={'white'}
+    >
+      <Stack as={Link} to={'/'} size={'sm'} m={3} mr={30}>
+        <Image src={logoEmpresa} alt="Logo" h={'100px'} />
       </Stack>
 
       <Breadcrumb mt={5} fontWeight="medium" fontSize="sm" separator="">
@@ -29,7 +35,7 @@ export const Header = () => {
             PRODUCTOS
             <ChevronDownIcon />
           </MenuButton>
-          <MenuList>
+          <MenuList color={'black'}>
             <MenuItem>Madera</MenuItem>
             <MenuItem>Cristal</MenuItem>
             <MenuItem>Acero inoxidable</MenuItem>
