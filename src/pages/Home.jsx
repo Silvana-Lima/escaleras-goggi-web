@@ -4,51 +4,38 @@ import {
   Divider,
   Flex,
   Heading,
+  HStack,
   Image,
   Stack,
   Text,
-  VStack,
 } from '@chakra-ui/react';
 import { Card, CardBody, CardFooter } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
 
+import { useDataCloud } from '../hooks/useDataCloud';
 import { getAllProducts } from '../service/products';
 
 export const Home = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const data = await getAllProducts();
-        setProducts(data);
-      } catch (error) {
-        console.log('error');
-      }
-    };
-
-    getData();
-  }, []);
-  console.log(products);
+  const { products } = useDataCloud(getAllProducts());
 
   return (
-    <VStack>
-      <Heading
-        color={'whiteAlpha.900'}
-        bg={'teal.600'}
-        p={10}
-        m={10}
-        h={'200px'}
-        w={'73%'}
-      >
-        ESCALERAS EXCLUSIVAS, desde Cantabria para España, únicas por su diseño
-        y calidad, ESCALERAS que transforman ambientes, viviendo la belleza de
-        los detalles.
-      </Heading>
+    <>
+      <HStack>
+        <Heading
+          color={'whiteAlpha.900'}
+          bg={'black'}
+          p={20}
+          h={'300px'}
+          w={'60%'}
+        >
+          ESCALERAS EXCLUSIVAS, desde Cantabria para España, únicas por su
+          diseño y calidad, ESCALERAS que transforman ambientes, viviendo la
+          belleza de los detalles.
+        </Heading>
+      </HStack>
 
       <Flex flexWrap={'wrap'} gap={'15px'} justifyContent={'center'}>
         {products.map((product) => (
-          <Card maxW="xs" key={product.id}>
+          <Card maxW="xs" key={product.id} bgColor={'black'} color={'white'}>
             <CardBody>
               <Image
                 src={product.images[0]}
@@ -74,6 +61,6 @@ export const Home = () => {
           </Card>
         ))}
       </Flex>
-    </VStack>
+    </>
   );
 };
