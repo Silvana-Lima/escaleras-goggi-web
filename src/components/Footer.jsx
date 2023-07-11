@@ -21,18 +21,23 @@ export const Footer = () => {
       backgroundColor="black"
       color={'white'}
       w={'100%'}
+      fontSize={['14px', '16px']}
       p={6}
       align={'center'}
       justify={('space-around', 'space-around')}
       direction={['column', 'row']}
     >
-      <Stack as={Link} to={'/'} size={'sm'} pb={5}>
-        <Image src={logoEmpresa} alt="Logo Escaleras Goggi" h={'100px'} />
+      <Stack as={Link} to={'/'} size={'sm'} pb={10}>
+        <Image
+          src={logoEmpresa}
+          alt="Logo Escaleras Goggi"
+          h={['80px', '100px']}
+        />
       </Stack>
-      <VStack pb={8}>
+      <VStack pb={10}>
         <Text>Representantes de:</Text>
         <Stack size={'sm'}>
-          <Image src={logoMarretti} alt="Logo Marreti" h={'40px'} />
+          <Image src={logoMarretti} alt="Logo Marreti" h={['30px', '40px']} />
         </Stack>
       </VStack>
       <VStack align={'center'} pb={8}>
