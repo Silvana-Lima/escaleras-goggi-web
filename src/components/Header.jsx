@@ -26,7 +26,7 @@ export const Header = () => {
       color={'white'}
     >
       <Stack as={Link} to={'/'} size={'sm'} m={3} mr={30}>
-        <Image src={logoEmpresa} alt="Logo" h={'100px'} />
+        <Image src={logoEmpresa} alt="Logo" h={'90px'} />
       </Stack>
 
       <Breadcrumb mt={5} fontWeight="medium" fontSize="sm" separator="">
