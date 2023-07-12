@@ -44,7 +44,7 @@ export const Footer = () => {
         <Text>Síguenos en nuestras redes sociales!!</Text>
         <LinkChakra href="https://www.instagram.com/escalerasgoggi/" isExternal>
           <IconButton
-            colorScheme="whiteAlpha"
+            colorScheme="teal"
             variant={'outline'}
             aria-label="Link Instagram"
             size="lg"
@@ -58,7 +58,7 @@ export const Footer = () => {
           isExternal
         >
           <IconButton
-            colorScheme="whiteAlpha"
+            colorScheme="teal"
             variant={'outline'}
             aria-label="Link Facebook"
             size="lg"

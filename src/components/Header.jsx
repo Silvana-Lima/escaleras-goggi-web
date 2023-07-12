@@ -47,7 +47,7 @@ export const Header = () => {
 
         <BreadcrumbItem>
           <BreadcrumbLink as={Link} to={'/nosotros'}>
-            NOSOTROS
+            LA EMPRESA
           </BreadcrumbLink>
         </BreadcrumbItem>
 
