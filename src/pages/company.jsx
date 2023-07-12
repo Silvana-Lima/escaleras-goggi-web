@@ -10,7 +10,7 @@ import {
 
 import escaleraModerna from '../assets/escaleraModerna.png';
 
-export const Us = () => {
+export const Company = () => {
   return (
     <Box display={'flex'} w={['100%', '80%']}>
       <SimpleGrid columns={[1, 1, 2]} m={[1, 5]} fontSize={['14px', '16px']}>

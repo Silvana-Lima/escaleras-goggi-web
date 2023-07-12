@@ -21,12 +21,14 @@ export const Home = () => {
     <>
       <HStack>
         <Heading
+          as={'h1'}
           color={'whiteAlpha.900'}
           bg={'black'}
           p={7}
-          w={'60%'}
-          mb={50}
-          mt={50}
+          w={['100%', '60%']}
+          m={3}
+          fontSize={['18px', '30px']}
+          fontWeight={'light'}
         >
           ESCALERAS EXCLUSIVAS, desde Cantabria para España, únicas por su
           diseño y calidad, ESCALERAS que transforman ambientes, viviendo la
