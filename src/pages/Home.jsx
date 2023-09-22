@@ -1,4 +1,5 @@
 import { Box, Button, Heading } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 import escaleraModerna from '../assets/escaleraModerna.png';
 import fondoEscaleras from '../assets/fondoEscaleras.png';
@@ -31,7 +32,9 @@ export const Home = () => {
         y calidad, ESCALERAS que transforman ambientes, viviendo la belleza de
         los detalles.
       </Heading>
-      <Button colorScheme="blackAlpha">Explora nuestras Escaleras</Button>
+      <Button colorScheme="blackAlpha" as={Link} to={'/products'}>
+        Explora nuestras Escaleras
+      </Button>
     </Box>
   );
 };

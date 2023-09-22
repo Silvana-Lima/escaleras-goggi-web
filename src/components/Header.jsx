@@ -73,6 +73,9 @@ export const Header = () => {
               <ChevronDownIcon />
             </MenuButton>
             <MenuList color={'black'}>
+              <MenuItem as={Link} to={'/products'}>
+                Todas
+              </MenuItem>
               <MenuItem>Madera</MenuItem>
               <MenuItem>Cristal</MenuItem>
               <MenuItem>Acero inoxidable</MenuItem>
