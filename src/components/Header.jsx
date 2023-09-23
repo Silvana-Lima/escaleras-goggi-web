@@ -46,7 +46,9 @@ export const Header = () => {
                 <MenuItem as={Link} to={'/'}>
                   Inicio
                 </MenuItem>
-                <MenuItem>Productos</MenuItem>
+                <MenuItem as={Link} to={'/products'}>
+                  Productos
+                </MenuItem>
                 <MenuItem as={Link} to={'/empresa'}>
                   La empresa
                 </MenuItem>
@@ -74,7 +76,7 @@ export const Header = () => {
             </MenuButton>
             <MenuList color={'black'}>
               <MenuItem as={Link} to={'/products'}>
-                Todas
+                Todos
               </MenuItem>
               <MenuItem>Madera</MenuItem>
               <MenuItem>Cristal</MenuItem>

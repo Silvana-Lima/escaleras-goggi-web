@@ -1,25 +1,103 @@
 import {
   Box,
-  Button,
-  ButtonGroup,
   Divider,
   Flex,
+  Grid,
+  GridItem,
   Heading,
   Image,
-  Stack,
-  Text,
 } from '@chakra-ui/react';
-import { Card, CardBody, CardFooter } from '@chakra-ui/react';
+// import { Card, CardBody, CardFooter } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
-import { useDataCloud } from '../hooks/useDataCloud';
-import { getAllProducts } from '../service/products';
+import escaleraModerna from '../assets/escaleraModerna.png';
+import escaleraroble from '../assets/escaleraroble.png';
+import escaleraVidrio from '../assets/escaleraVidrio.png';
+// import { useDataCloud } from '../hooks/useDataCloud';
+// import { getAllProducts } from '../service/products';
 
 export const Products = () => {
-  const { products } = useDataCloud(getAllProducts());
+  // const { products } = useDataCloud(getAllProducts());
   return (
-    <Flex direction={'column'} alignItems={'center'}>
-      <Heading color={'white'}>Productos</Heading>
-      <Flex flexWrap={'wrap'} gap={'15px'} justifyContent={'center'}>
+    <Flex direction={'column'} width={'80%'}>
+      <Heading
+        as={'h2'}
+        fontSize={['18px', '24px']}
+        color={'white'}
+        mt={6}
+        mb={6}
+      >
+        Productos
+      </Heading>
+      <Divider orientation="horizontal" mb={6} />
+      <Grid
+        templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}
+        templateRows={['repeat(3, 1fr)', 'repeat(1, 1fr)']}
+        gap={6}
+      >
+        <GridItem as={Link} w={'100%'}>
+          <Box h={['300px', '400px']}>
+            <Image
+              src={escaleraroble}
+              borderRadius={'lg'}
+              alt="Dan Abramov"
+              boxSize={['100%']}
+            />
+          </Box>
+
+          <Heading
+            as={'h3'}
+            fontSize={['16px', '20px']}
+            color={'whiteAlpha.900'}
+            mt={6}
+            mb={6}
+          >
+            Madera
+          </Heading>
+          <Divider orientation="horizontal" mt={6} mb={6} />
+        </GridItem>
+        <GridItem as={Link} w={['100%']}>
+          <Box h={['300px', '400px']}>
+            <Image
+              src={escaleraVidrio}
+              borderRadius={'lg'}
+              alt="Dan Abramov"
+              boxSize={['100%']}
+            />
+          </Box>
+          <Heading
+            as={'h3'}
+            fontSize={['16px', '20px']}
+            color={'whiteAlpha.900'}
+            mt={6}
+            mb={6}
+          >
+            Cristal
+          </Heading>
+          <Divider orientation="horizontal" mt={6} mb={6} />
+        </GridItem>
+        <GridItem as={Link} w={'100%'}>
+          <Box h={['300px', '400px']}>
+            <Image
+              src={escaleraModerna}
+              borderRadius={'lg'}
+              alt="Dan Abramov"
+              boxSize={['100%']}
+            />
+          </Box>
+          <Heading
+            as={'h3'}
+            fontSize={['16px', '20px']}
+            color={'whiteAlpha.900'}
+            mt={6}
+            mb={6}
+          >
+            Acero inoxidable
+          </Heading>
+          <Divider orientation="horizontal" mt={6} mb={6} />
+        </GridItem>
+      </Grid>
+      {/* <Flex flexWrap={'wrap'} gap={'15px'} justifyContent={'center'}>
         {products.map((product) => (
           <Card
             maxW="xs"
@@ -51,7 +129,7 @@ export const Products = () => {
             </CardFooter>
           </Card>
         ))}
-      </Flex>
+      </Flex> */}
     </Flex>
   );
 };
