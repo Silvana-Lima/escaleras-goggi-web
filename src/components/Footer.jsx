@@ -24,7 +24,7 @@ export const Footer = () => {
       fontSize={['14px', '16px']}
       p={6}
       align={'center'}
-      justify={('space-around', 'space-around')}
+      justify={'space-around'}
       direction={['column', 'row']}
     >
       <Stack as={Link} to={'/'} size={'sm'} pb={10}>

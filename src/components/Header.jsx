@@ -78,7 +78,9 @@ export const Header = () => {
               <MenuItem as={Link} to={'/products'}>
                 Todos
               </MenuItem>
-              <MenuItem>Madera</MenuItem>
+              <MenuItem as={Link} to={'/madera'}>
+                Madera
+              </MenuItem>
               <MenuItem>Cristal</MenuItem>
               <MenuItem>Acero inoxidable</MenuItem>
               <MenuItem>Acabados Especiales</MenuItem>

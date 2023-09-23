@@ -4,6 +4,7 @@ import { AppLayout } from './layout/AppLayout';
 import { Company } from './pages/company';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
+import { Madera } from './pages/Madera';
 import { News } from './pages/News';
 import { Products } from './pages/Products';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/novedades" element={<News />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/madera" element={<Madera />} />
         </Route>
       </Routes>
     </>
