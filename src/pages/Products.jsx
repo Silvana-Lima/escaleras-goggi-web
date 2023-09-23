@@ -84,40 +84,6 @@ export const Products = () => {
           </CardBody>
         </Card>
       </Flex>
-      {/* <Flex flexWrap={'wrap'} gap={'15px'} justifyContent={'center'}>
-        {products.map((product) => (
-          <Card
-            maxW="xs"
-            key={product.id}
-            backgroundColor="rgba(0, 0, 0, 0.8)"
-            color={'white'}
-          >
-            <CardBody>
-              <Box h={300} w={280}>
-                <Image
-                  src={product.images[0]}
-                  alt={product.name}
-                  borderRadius="lg"
-                  boxSize={'100%'}
-                />
-              </Box>
-
-              <Stack mt="6" spacing="3">
-                <Heading size="md">{product.name} </Heading>
-                <Text>{product.description}</Text>
-              </Stack>
-            </CardBody>
-            <Divider />
-            <CardFooter>
-              <ButtonGroup spacing="2">
-                <Button variant="ghost" colorScheme="teal">
-                  Ver más
-                </Button>
-              </ButtonGroup>
-            </CardFooter>
-          </Card>
-        ))}
-      </Flex> */}
     </Flex>
   );
 };

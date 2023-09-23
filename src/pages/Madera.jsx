@@ -46,6 +46,7 @@ export const Madera = () => {
             key={product.id}
             backgroundColor="rgba(0, 0, 0, 0.2)"
             color={'white'}
+            as={Link}
           >
             <CardBody>
               <Box h={[260, 300]} w={[250, 280]}>
